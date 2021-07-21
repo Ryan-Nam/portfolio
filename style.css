@@ -26,10 +26,39 @@
   --weight-bold: 700;
   --weight-semi-bold: 600;
   --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* to delete default value of web broswer */
+  margin: 0;
+  /* from google font */
+  font-family: "Open Sans", sans-serif;
+  /* when hover, same cursor shape */
+  cursor: default;
+}
+
+/* a {
+   to delete underline 
+  text-decoration: none;
+  color: var(--color-white);
+} */
+
+ul {
+  /* to delete dot in nav menu */
+  list-style: none;
+  /* to delete default value */
+  padding-left: 0;
 }
 
 /* Typography */
-
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
@@ -58,7 +87,33 @@ p {
   margin: 4px 0;
 }
 
-/* Universal tags */
-* {
-  box-sizing: border-box;
+/* Navbar - logo */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pink);
+  align-items: center;
+  color: var(--color-white);
+  padding: 10px;
+}
+
+.navbar__menu {
+  /* to become horizontal align */
+  display: flex;
+}
+
+.navbar__menu__item {
+  padding: 8px 12px;
+  margin: 0 4px;
+  /* when hover, cursor shape will be finger style */
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
 }
