@@ -14,6 +14,11 @@
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  --color-nav-content: #1c3b28;
+  --color-light-green: #edede8;
+  --color-light-blue: #f6f6f3;
+  --color-dark-green: #093127;
+  --color-button-green: #257a4e;
 
   /* Font size */
   --font-large: 48px;
@@ -29,6 +34,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -57,6 +65,19 @@ ul {
   /* to delete default value */
   padding-left: 0;
 }
+
+/* To delete default button setting */
+button {
+  background-color: transparent;
+  cursor: pointer;
+  /* to remove, outline, border when clicked */
+  border: none;
+  outline: noen;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* In terms of "Button", "Input", these tags are not inherited from the Body CSS I set
+which means, have to define font-fmaily again to button */
 
 /* Typography */
 h1 {
@@ -91,7 +112,7 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: var(--color-nav-content);
   align-items: center;
   color: var(--color-white);
   padding: 10px;
@@ -116,4 +137,176 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  background-color: var(--color-nav-content);
+  text-align: center;
+  padding: 40px;
+}
+
+.home__avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  /* up,down / left,right */
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+
+  /* To remove default margin value */
+  /* Not margin 0px, Must be Margin:auto */
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  /* to insert space between */
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  /* CSS trick = Hackky way to make vertical alin */
+  line-height: 170px;
+  font-size: 70px;
+  /* To remove default margin value */
+  /* Not margin 0px, Must be Margin:auto */
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+  color: var(--color-blue);
+}
+
+/* 
+ * X = .major__icon i:hover i {} 
+ * O = .major__icon:hover i {}
+ */
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+.major__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+.job__period {
+  font-size: var(--font-micro);
+}
+
+/* Skill */
+
+#skills {
+  background-color: var(--color-light-blue);
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-light-green);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset__title {
+  color: var(--color-white);
+  margin: auto;
+}
+
+.skill {
+  margin-bottom: 32px;
+}
+
+.skill__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-dark-green);
+  padding: 20px 40px;
+}
+
+/* Interms of Percentage bar = width 
+ * Have to be defined in HTML tag
+ All data will be managed in JASON 
+ transfer to HTML code.. 
+*/
+.skill__value {
+  height: 3px;
+  background-color: var(--color-orange);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.tools {
+  background-color: var(--color-button-green);
+}
+
+.skill__bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.tools,
+.etc {
+  padding: 20px;
 }
