@@ -112,10 +112,21 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-nav-content);
+  /* background-color: var(--color-nav-content); */
+  background-color: transparent;
+  position: fixed; /* But width will be different cuz out of parent*/
+  width: 100%;
+
   align-items: center;
   color: var(--color-white);
   padding: 10px;
+
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-white);
+  color: #000000;
 }
 
 .navbar__menu {
@@ -153,6 +164,7 @@ p {
   background-color: var(--color-nav-content);
   text-align: center;
   padding: 40px;
+  padding-top: 120px;
 }
 
 .home__avatar {
