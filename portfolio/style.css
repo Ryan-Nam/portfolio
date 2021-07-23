@@ -122,19 +122,15 @@ p {
   padding: 10px;
 
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-white);
   color: #000000;
 }
-.navbar__logo__img.navbar--changelogo img {
-  visibility: hidden;
-}
-.navbar__logo__img.navbar--changelogo {
-  background-image: url("imgs/ryan_black.png");
-  background-size: cover;
-  width: 150px;
+.navbar__logo__img--dynamic:hover {
+  opacity: 0.5;
 }
 
 .navbar__menu {
