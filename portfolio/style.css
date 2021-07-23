@@ -128,6 +128,14 @@ p {
   background-color: var(--color-white);
   color: #000000;
 }
+.navbar__logo__img.navbar--changelogo img {
+  visibility: hidden;
+}
+.navbar__logo__img.navbar--changelogo {
+  background-image: url("imgs/ryan_black.png");
+  background-size: cover;
+  width: 150px;
+}
 
 .navbar__menu {
   /* to become horizontal align */
