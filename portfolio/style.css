@@ -139,7 +139,7 @@ p {
   background-color: var(--color-dark-pink);
 }
 
-.navar_tootle-btn {
+.navbar__toggle-btn {
   position: absolute;
   right: 32px;
   font-size: 24px;
@@ -489,7 +489,7 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
-  .navar_tootle-btn {
+  .navbar__toggle-btn {
     display: block;
   }
 
@@ -502,6 +502,7 @@ p {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    /* hide before clicked */
     display: none;
   }
 
