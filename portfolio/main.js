@@ -49,10 +49,6 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeheight;
 });
 
-
-
-
-
 // smooth selector function
 function scrollIntoViews(selector){
     const scrollTo = document.querySelector(selector);
