@@ -504,6 +504,21 @@ p {
   transition: all --animation-duration ease-in;
 }
 
+/* Scroll (Arriow) */
+.arrow-up {
+  /* firslty, position fixed... out from the parent, cuz we need to set */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+
+  font-size: 50px;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
