@@ -152,7 +152,27 @@ p {
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-pink);
+  /* background-color: var(--color-dark-pink); */
+}
+.navbar__menu__item {
+  position: relative;
+}
+.navbar__menu__item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.3s;
+  opacity: 0;
+  background-color: var(--color-white);
+}
+.navbar__menu__item:hover:after {
+  width: 100%;
+  opacity: 1;
 }
 
 .navbar__toggle-btn {
@@ -486,7 +506,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-button-green);
 }
 
 .contact__title,
