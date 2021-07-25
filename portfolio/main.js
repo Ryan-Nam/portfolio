@@ -64,6 +64,47 @@ arrowUp.addEventListener('click', () =>{
     scrollIntoViews('#home');
 });
 
+// Projects
+const workBtncontainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+// add array for all the 8 projects
+const projects = document.querySelectorAll('.project');
+workBtncontainer.addEventListener('click', (e) =>{
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if( filter == null) {
+        return;
+    }
+    // } if filter is null, do not do anything
+    console.log(filter);
+    projects.forEach((project) => {
+        console.log(project.dataset.type);
+        if(filter === '*' || filter === project.dataset.type ){
+            project.classList.remove('invisible');
+            //WHEN it is clicked, not showing...!!
+        } else {
+            project.classList.add('invisible');
+        }
+    });
+
+    //console.log(`-----------------`);
+// method 2
+// for(let project of projects){
+//  console.log(project);
+
+// }
+
+//console.log(`-----------------`);
+// method 3
+// let project;
+// for (let i = 0; i < projects.length; i++) {
+//     project = projects[i];
+//      console.log(project);
+// }
+
+    //console.log(filter);
+});
+
+
 // smooth selector function
 function scrollIntoViews(selector){
     const scrollTo = document.querySelector(selector);
