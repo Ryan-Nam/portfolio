@@ -512,11 +512,23 @@ p {
   right: 50px;
 
   font-size: 50px;
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-green);
   color: var(--color-white);
   border-radius: 50%;
   width: 70px;
   height: 70px;
+
+  /* but it's too sudden, so add animation smooth */
+  /* So instad of display noen, and display:block, use opacity */
+  transition: all 300ms ease-in;
+  opacity: 0;
+  /* but end user still can clikc.... */
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* For below 768px screen width */
