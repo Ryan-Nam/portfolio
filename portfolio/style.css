@@ -147,7 +147,8 @@ p {
 }
 
 .navbar__menu__item.active {
-  border: 1px solid var(--color-white);
+  /* border: 1px solid var(--color-white); */
+  font-weight: 700;
 }
 
 .navbar__menu__item:hover {
