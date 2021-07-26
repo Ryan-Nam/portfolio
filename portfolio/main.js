@@ -82,7 +82,10 @@ workBtncontainer.addEventListener('click', (e) =>{
         return;
     }
     // } if filter is null, do not do anything
-    console.log(filter);
+    //console.log(filter);
+    projectContainer.classList.add('anim-out');
+
+
     projects.forEach((project) => {
         console.log(project.dataset.type);
         if(filter === '*' || filter === project.dataset.type ){
@@ -92,6 +95,10 @@ workBtncontainer.addEventListener('click', (e) =>{
             project.classList.add('invisible');
         }
     });
+
+    setTimeout(() => {
+        projectContainer.classList.remove('anim-out');
+    }, 300);
 
     //console.log(`-----------------`);
 // method 2
