@@ -17,11 +17,13 @@ document.addEventListener('scroll', () => {
         navbar__logo.src="imgs/ryan_black.png"
         hamburger__color.style.color = "var(--color-black)"
         // nav__underline_effect.style.backgroundColor = "var(--color-black)"
+        navbar.classList.add('floatingNav');
     }else{
         navbar.classList.remove('navbar--dark');
         navbar__logo.src="imgs/ryan_white.png"
         hamburger__color.style.color = "var(--color-white)"
         // nav__underline_effect.style.backgroundColor = "var(--color-white)"
+        navbar.classList.remove('floatingNav');
     }
 });
 

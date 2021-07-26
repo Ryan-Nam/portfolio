@@ -129,6 +129,7 @@ p {
   background-color: var(--color-white);
   color: #000000;
 }
+
 .navbar__logo__img--dynamic:hover {
   opacity: 0.5;
 }
