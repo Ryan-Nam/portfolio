@@ -130,6 +130,10 @@ p {
   color: #000000;
 }
 
+#navbar.floatingNav {
+  border-radius: 2px;
+  box-shadow: 0px 1px 10px #999;
+}
 .navbar__logo__img--dynamic:hover {
   opacity: 0.5;
 }
