@@ -86,17 +86,19 @@ workBtncontainer.addEventListener('click', (e) =>{
     projectContainer.classList.add('anim-out');
 
 
-    projects.forEach((project) => {
-        console.log(project.dataset.type);
-        if(filter === '*' || filter === project.dataset.type ){
-            project.classList.remove('invisible');
-            //WHEN it is clicked, not showing...!!
-        } else {
-            project.classList.add('invisible');
-        }
-    });
+    
 
     setTimeout(() => {
+
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if(filter === '*' || filter === project.dataset.type ){
+                project.classList.remove('invisible');
+                //WHEN it is clicked, not showing...!!
+            } else {
+                project.classList.add('invisible');
+            }
+        });
         projectContainer.classList.remove('anim-out');
     }, 300);
 
