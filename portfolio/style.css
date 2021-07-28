@@ -305,7 +305,7 @@ p {
 
 .skillset {
   display: flex;
-  background-color: var(--color-light-green);
+  background-color: #a4b0a9;
   color: var(--color-light-white);
   margin: 20px 0;
 }
