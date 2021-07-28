@@ -326,7 +326,7 @@ p {
 
 .skillset__left {
   flex-basis: 60%;
-  background-color: var(--color-dark-green);
+  background-color: #324e3d;
   padding: 20px 40px;
 }
 
@@ -345,7 +345,7 @@ p {
 }
 
 .tools {
-  background-color: var(--color-button-green);
+  background-color: #76897e;
 }
 
 .skill__bar {
