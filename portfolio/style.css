@@ -374,7 +374,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: #324e3d;
   color: var(--color-white);
 }
 
@@ -513,7 +513,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-button-green);
+  background-color: #324e3d;
 }
 
 .contact__title,
