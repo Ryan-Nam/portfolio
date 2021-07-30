@@ -529,7 +529,7 @@ p {
 
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--color-yellow);
+  color: var(--color-orange);
 }
 
 .contact__links i {
